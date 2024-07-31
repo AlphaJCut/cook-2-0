@@ -1,0 +1,119 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex.menu{
+    flex-direction: column;
+}
+header{
+    background-image: url(../images/Background.avif);
+    padding: 0.5rem;
+}
+header img{
+    width: 120px;
+}
+.ads>div{
+    width: 180px;
+    height: 120px;
+    border: 1px dashed darkblue;
+    margin: 3px;
+    text-align: center;
+    background-color: aqua;
+    line-height: 120px;
+}
+header input[type=text]{
+    padding: 5px;
+}
+.sub{
+    position: relative;
+}
+.submenu{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: aquamarine !important;
+    transition: opacity 1s;
+    list-style-type: none;
+}
+.submenu::after{
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent aquamarine transparent;
+    position: absolute;
+    left: 20%;
+    bottom: 100%;
+}
+.sub:hover .submenu{
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+.menu.submenu{
+    flex-direction: column;
+}
+ul.menu3muc{
+    background-color: rgb(127, 157, 255);
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ul.menu3muc>li{
+    border: 1px solid black;
+}
+ul.menu3muc>li>a{
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+ul.menu3muc>li>a:hover{
+    background-color: green;
+    color: #FFFFFF;
+}
+.left{
+    width: 20%;
+    align-self: flex-start;
+}
+.left>div{
+    text-align: center;
+    margin: 10px;
+}
+ul.menu{
+    list-style-type: none;
+    background-color: lightgray;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ul.menu>li{
+    border-left: 1px solid white;
+    width: 100%;
+}
+ul.menu>li>a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    background-image: linear-gradient(lightgray,aquamarine);
+    border: 1px solid black;
+}
+
+.right{
+    width: 80%;
+    height: 120px;
+}
+.book{
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.book img{
+    width: 100%;
+}
+body{
+    background-color: aquamarine;
+}

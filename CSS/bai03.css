@@ -1,0 +1,101 @@
+.subject{
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
+    text-shadow: 3px 4px 3px aquamarine;
+    animation: change 2s infinite;
+}
+@keyframes change{
+    from{
+        color: green;
+    }
+   to{
+       color: purple;
+   }
+}
+ul.menu{
+    list-style-type: none;
+    background-color: lightgray;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ul.menu>li{
+    border-left: 1px solid white;
+}
+ul.menu>li:last-child{
+    margin-left: auto;
+}
+ul.menu>li>a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+ul.menu>li>a:hover{
+    background-color: #0000FF;
+    color: #FFFFFF;
+}
+.blocks{
+    background-color: darkgray;
+}
+.block{
+    margin-top: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+.block img{
+    width: 100px;
+    float: left;
+}
+.block img:hover{
+    cursor: grabbing;
+    transform: rotate(30deg);
+
+}
+footer{
+    padding: 1rem;
+    background-color: #0000FF;
+    color: white;
+   overflow: hidden;
+}
+footer>span{
+    animation: move linear 5s infinite;
+    position: relative;
+}
+@keyframes move{
+    from{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}
+.sub{
+    position: relative;
+}
+.submenu{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: aquamarine !important;
+    transition: opacity 1s;
+    list-style-type: none;
+}
+.submenu::after{
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent aquamarine transparent;
+    position: absolute;
+    left: 20%;
+    bottom: 100%;
+}
+.sub:hover .submenu{
+    /* display: block !important; */
+    opacity: 1;
+    visibility: visible;
+}
+.menu.submenu{
+    flex-direction: column;
+}
